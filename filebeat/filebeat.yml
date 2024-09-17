@@ -1,0 +1,13 @@
+filebeat.inputs:
+  - type: filestream
+    id: mysql-slowlog-updates
+    paths:
+      - /var/log/mysql/slow.log
+    parsers:
+      - multiline:
+          pattern: '^\#[[:space:]]Time'
+          negate: true
+          match: after
+
+output.logstash:
+  hosts: ["logstash:5044"]
