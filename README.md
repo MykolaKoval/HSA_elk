@@ -1,5 +1,5 @@
 # HSA elk performance
-ELK setup
+ELK and Graylog logging stack comparison
 
 <h3>Task</h3>
 
@@ -53,3 +53,7 @@ Metrics collected with ``long_query_time = 0, 1, 10 sec``
 
 <img src="./images/elk_system_resources.png" width="600">
 <img src="./images/graylog_system_resources.png" width="600">
+
+Conclusions: <br/>
+
+Graylog stack is more aggressive to memory consumption, other params look similar.
